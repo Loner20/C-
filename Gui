@@ -1,0 +1,62 @@
+from tkinter import *
+
+root = Tk()
+
+def click(s):
+
+    if s=="+":
+
+        x.set(int(e1.get())+int(e2.get()))
+
+    elif s=="-":
+
+        x.set(int(e1.get())-int(e2.get()))
+
+    elif s=="*":
+
+        x.set(int(e1.get())*int(e2.get()))
+
+    else:
+
+        x.set(int(e1.get())/int(e2.get()))
+
+x=IntVar()
+
+l1=Label(root,text="Enter you first number ")
+
+l2=Label(root,text="Enter you second number ")
+
+e1=Entry(root)
+
+e2=Entry(root)
+
+b1=Button(root,text="+",command=lambda:click("+"))
+
+b2=Button(root,text="-",command=lambda:click("-"))
+
+b3=Button(root,text="*",command=lambda:click("*"))
+
+b4=Button(root,text="/",command=lambda:click("/"))
+
+l3=Label(root,textvariable=x)
+
+l1.grid(row=0,column=0,padx=10,pady=10)
+
+l2.grid(row=1,column=0,padx=10,pady=10)
+
+e1.grid(row=0,column=1,padx=10,pady=10,columnspan=3)
+
+e2.grid(row=1,column=1,padx=10,pady=10,columnspan=3)
+
+b1.grid(row=2,column=0,padx=10,pady=10,ipadx=10,ipady=10)
+
+b2.grid(row=2,column=1,padx=10,pady=10,ipadx=10,ipady=10)
+
+b3.grid(row=2,column=2,padx=10,pady=10,ipadx=10,ipady=10)
+
+b4.grid(row=2,column=3,padx=10,pady=10,ipadx=10,ipady=10)
+
+l3.grid(row=3,column=0,padx=10,pady=10,columnspan=4)
+
+root.mainloop()
+
