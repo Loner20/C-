@@ -1,0 +1,116 @@
+1.Write a python program accept from user 
+following information and validate as per 
+the constraints using regular expressions 
+
+
+
+
+
+import re
+
+name=input("Enter Username: ")
+
+mobile=input("Enter your mobile number: ")
+
+email=input("Enter your email id: ")
+
+if re.match(r'[A-Za-z0-9]\w{7,14}$',name):
+
+    print("Username valid")
+
+else:
+
+    print("Username Invalid")
+
+if re.match(r'\d{10}$',mobile):
+
+    print("Mobile Number is Valid")
+
+else:
+
+    print("Mobile Number is not valid")
+
+if re.match(r'[a-z][a-z0-9_.]*@[a-z0-9]+[.]com',email):
+
+    print("Email Id is valid")
+
+else:
+
+    print("Email id is invalid")
+
+
+2.  Write a Python function text_match() that
+ matches a string that has an 'a' followed by
+ zero or more occurrences of anything,
+ ending in 'b'. 
+
+def text_match(str1):
+
+    if re.search(r'ab*',str1):
+
+        res=f"The string {str1} contains the pattern"
+
+    else:
+
+        res=f"The string {str1} does not contains the pattern"
+
+    return res
+
+str1=input("Enter your string: ")
+
+x=text_match(str1)
+
+print(x)
+
+3.     Write a Python function text_match() that matches a string that has an 'a' followed by zero or more occurrences of anything, ending in 'b'. 
+
+Source code: -
+
+import re
+
+def text_match(str1):
+
+    if re.search(r'a.*b$',str1):
+
+        res=f"The string {str1} contains the pattern"
+
+    else:
+
+        res=f"The string {str1} does not contains the pattern"
+
+    return res
+
+str1=input("Enter your string: ")
+
+x=text_match(str1)
+
+print(x)
+
+4.     Write a python program to accept an address and replace occurrences of Road by Rd., District by Dst. And Street by St. 
+
+Source code: -
+
+import re
+
+address=input("Enter your address ")
+
+new_address=re.sub(r'[Rr]oad','Rd.',address)
+
+print(new_address)
+
+new_address=re.sub(r'[Ss]treet','St.',new_address)
+
+print(new_address)
+
+new_address=re.sub(r'[Dd]istrict','Dst.',new_address)
+
+print(new_address)
+
+ 
+
+
+
+
+
+ 
+
