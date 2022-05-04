@@ -1,0 +1,15 @@
+open("D:\\Backup\\Program\\nums.txt","r") as file1:
+    numlist=[]
+    for i in file1:
+        numlist.append(int(i))
+sums=0
+sumsq=0
+for item in numlist:
+    sums+=item
+    sumsq+=item**2
+mean=sums/len(numlist)
+print(sums,mean,sumsq)
+with open("D:\\Backup\\Program\\result.txt","w") as file2:
+        file2.write("Sum = "+str(sums)+"\n")
+        file2.write("Mean = "+str(mean)+"\n")
+        file2.write("Square sum = "+str(sumsq)+"\n")
