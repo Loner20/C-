@@ -1,2 +1,8 @@
 import os
 os.getcwd()
+
+import os 
+
+os.chdir('D:\\Backup')   //to change directory 
+
+
