@@ -1,0 +1,34 @@
+Normal error:
+
+try:
+    x = int(input("Enter a number "))
+    y = int(input("Enter another number "))
+    z=x/y
+    print(f"Quotient of {x} and {y} is {z}")
+except ZeroDivisionError:
+    print("Please ensure that the division is not Zero")
+except NameError:
+    print("Undefined variable")
+except ValueError:
+    print("Improper arguments to functions")
+else:
+    print("No Exceptions")
+finally:
+    print("Exceptions are handled in this code")
+For name error:
+try:
+    x = int(input("Enter a number "))
+    y = int(input("Enter another number "))
+    z=t/y
+    print(f"Quotient of {x} and {y} is {z}")
+except ZeroDivisionError:
+    print("Please ensure that the division is not Zero")
+except NameError:
+    print("Undefined variable")
+except ValueError:
+    print("Improper arguments to functions")
+else:
+    print("No Exceptions")
+finally:
+    print("Exceptions are handled in this code")
+
