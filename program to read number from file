@@ -1,0 +1,6 @@
+open("D:\\Backup\\Program\\number.txt") as file1,open("D:\\Backup\\Program\\factorial.txt","w") as file2:
+    for line in file1:
+        n=int(line)
+        f=math.factorial(n)
+        file2.write(str(f)+"\n")
+
