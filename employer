@@ -1,0 +1,43 @@
+empname = []
+empid = []
+basic = []
+Da = []
+Hra = []
+Ta = []
+Netsalary = []
+with open("D:\\Backup\\Program\\emp.txt") as file1:
+    for line in file1:
+        ename,eid,b=line.split()
+        empname.append(ename)
+        empid.append(eid)
+        basic.append(int(b))
+print("Employee Name")
+for i in empname:
+    print(i)
+print("Employee id")
+for i in empid:
+    print(i)
+print("Basic Salary")
+for i in basic:
+    Da.append(i*0.85)
+    Hra.append(i*0.12)
+    Ta.append(i*0.50)
+for i in range(len(basic)):
+    Netsalary.append(basic[i]+Hra[i]+Da[i])
+print("Dearness Allowed")
+for i in Da:
+    print(i)
+print("House rented allowed")
+for i in Hra:
+    print(i)
+print("Transport Allowance")
+for i in Ta:
+    print(i)
+print("Netsalary")
+for i in Netsalary:
+    print(i)
+with open("D:\\Backup\\Program\\Payslip.txt","w") as file2:
+    file2.write("EmpID\tEmpName\tBasic\tDA\tHRA\tTA\tNetsalary\n")
+    for i in range(len(basic)):
+        a=empid[i]+"    "+empname[i]+"    "+str(basic[i])+"   "+str(Da[i])+" "+str(Hra[i])+" "+str(Ta[i])+" "+str(Netsalary[i])+"\n"
+        file2.write(a)
