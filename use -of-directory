@@ -6,3 +6,9 @@ import os
 os.chdir('D:\\Backup')   //to change directory 
 
 
+import os
+
+os.mkdir('D:\\Backup\\hello') // to create new directory 
+
+
+
