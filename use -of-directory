@@ -8,7 +8,37 @@ os.chdir('D:\\Backup')   //to change directory
 
 import os
 
-os.mkdir('D:\\Backup\\hello') // to create new directory 
+os.mkdir('D:\\Backup\\hello') // to create new directory
+
+
+import os
+
+os.listdir() // list directory 
+
+
+import os
+os.rename('hello','Hey') // to rename dir
+
+
+import os
+
+os.rmdir('D:\\Backup\\Hey') // to remove dir
+
+
+import os
+os.remove('D:\\Backup\\1.txt')   // to remove file
+
+
+
+
+ 
+
+
+
+
+ 
+
+ 
 
 
 
